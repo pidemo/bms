@@ -1,4 +1,4 @@
-console.log("latest-4.7");
+console.log("latest-4.8");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -41,10 +41,6 @@ for (var i = 0; i < hashParams.length; i++) {
     if (element) { element.value = decoded; }
     var targetElement = document.getElementById(target);
     if (targetElement) { targetElement.innerText = decoded; }
-    // Add booking GID to matching field
-    if (target == "booking-gid") {
-        console.log(decoded);
-    }
 };
 
 const pageTotal = document.querySelector('#bookform-total');
