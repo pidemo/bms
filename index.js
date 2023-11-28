@@ -89,7 +89,7 @@ for (element of options) {
         var newTest = document.querySelectorAll(".form_option-total");
         console.log(newTest);
         for (element of newTest) {
-            //sum += Number(element.unitCost);
+            sum += Number(element.innerText);
             //console.log(this.value);
         }
         pageTotal.innerText = sum;
