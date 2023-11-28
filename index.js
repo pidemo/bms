@@ -1,4 +1,4 @@
-console.log("latest-4.8.3");
+console.log("latest-4.8.3.1");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -88,14 +88,9 @@ for (element of options) {
         var sum = 0;
         var newTest = document.querySelectorAll(".form_option-total");
         for (element of newTest) {
-            sum += Number(this.innerText());
+            sum += Number(this.value);
             console.log(sum);
         }
-        /*
-        $('.form_option-total').each(function () {
-            sum += Number($(this).text());
-        });
-        */
         pageTotal.innerText = sum;
         pageDeposit.innerText = sum / 2;
 
