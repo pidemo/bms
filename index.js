@@ -7,6 +7,7 @@ var mainForm = document.querySelector('#main-form-wrap');
 
 var bookingGid = urlParams.get('booking-gid');
 console.log(bookingGid);
+console.log(URLSearchParams);
 
 // Form Prefill Testing
 mainForm.classList.add('hidden');
