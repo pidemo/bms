@@ -72,7 +72,7 @@ for (element of options) {
 };
 
 
-
+/*
 
 // Form Math on Page
 var form = document.getElementById('wf-form-Booking-Form');
@@ -83,7 +83,7 @@ form.addEventListener('submit', function(event) {
     // Call the extractAndSubmit function
     extractAndSubmit();
 });
-/*
+
 function extractAndSubmit() {
     
     // Create an object to store form data
