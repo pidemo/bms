@@ -52,7 +52,7 @@ for (element of options) {
     var optionCost = childHelper.getAttribute('data-price');
     var optionXid = childHelper.getAttribute('data-xid');
     var unitInput = element.getElementsByClassName('form_option-count')[0];
-    formulasData.push({ xid: optionXid, count: unitInput });
+    formulasData.push({ xid: optionXid, count: 0 });
     unitInput.addEventListener("input", function (e) {
         var unitCount = this.value;
         var unitCost = this.getAttribute('data-price');
