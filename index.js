@@ -86,9 +86,16 @@ for (element of options) {
         var optionTotal = unitCost * unitCount;
         formulaTotal.innerText = optionTotal;
         var sum = 0;
+        var newTest = document.querySelectorAll(".form_option-total");
+        for (element of newTest) {
+            sum += Number(this.innerText());
+            console.log(sum);
+        }
+        /*
         $('.form_option-total').each(function () {
             sum += Number($(this).text());
         });
+        */
         pageTotal.innerText = sum;
         pageDeposit.innerText = sum / 2;
 
