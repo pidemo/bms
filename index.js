@@ -1,4 +1,4 @@
-console.log("latest-4.8");
+console.log("latest-4.8.1");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -67,13 +67,12 @@ var endTimestamp = Math.floor(endDate.getTime() / 1000);
 // date fields
 const dateStart = document.querySelector('#date-start');
 const dateEnd = document.querySelector('#date-end');
-const eventGid = document.querySelector('#event-gid');
+//const eventGid = document.querySelector('#c-booking-gid');
 
 dateStart.value = startTimestamp;
 dateEnd.value = endTimestamp;
-eventGid.value = bookingGid;
-
-console.log(bookingGid);
+//eventGid.value = bookingGid;
+//console.log(bookingGid);
 
 
 var formulasData = {};
