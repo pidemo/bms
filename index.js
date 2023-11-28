@@ -1,10 +1,9 @@
-console.log("latest-4.2");
+console.log("latest-4.3");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 var fullHash = window.location.hash;
 var mainForm = document.querySelector('#main-form-wrap');
-var sumUp = {};
 
 // Form Prefill Testing
 mainForm.classList.add('hidden');
@@ -12,7 +11,6 @@ document.getElementById("bookform-contact").value = "Pierre";
 document.getElementById("bookform-company").value = "Company";
 document.getElementById("bookform-email").value = "pierre@email.com";
 document.getElementById("bookform-people-2").value = 20;
-
 
 if (
     //fullHash.includes('approved')
@@ -64,17 +62,14 @@ for (element of options) {
         var formulaTotal = document.getElementById(targetTotal);
         var optionTotal = unitCost * unitCount;
         formulaTotal.innerText = optionTotal;
-        
         var sum = 0;
         $('.form_option-total').each(function () {
             sum += Number($(this).text());
         });
         pageTotal.innerText = sum;
         pageDeposit.innerText = sum / 2;
-        // Convert the array to a JSON string
+        // Convert the array to a JSON string & set hide input value
         var formulasDataString = JSON.stringify(formulasData);
-
-        // Set the value of the hidden input field
         document.getElementById('formulasData').value = formulasDataString;
     });
 };
