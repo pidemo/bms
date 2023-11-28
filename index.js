@@ -52,6 +52,7 @@ for (element of options) {
     var optionXid = childHelper.getAttribute('data-xid');
     var unitInput = element.getElementsByClassName('form_option-count')[0];
     formulasData[optionXid] = 0;
+    // bring back older version so we don't have to convert at bottom
 
     unitInput.addEventListener("input", function (e) {
         var unitCount = this.value;
@@ -68,17 +69,13 @@ for (element of options) {
         });
         pageTotal.innerText = sum;
         pageDeposit.innerText = sum / 2;
-        // Convert the object to a JSON string & set it to input value
-        var formulasDataString = JSON.stringify(formulasData);
-        document.getElementById('formulas-sumup-string').value = formulasDataString;
-
+        
         // Convert the object to an arrat & set it to input value
         var formulasDataArray = [];
         for (var key in formulasData) {
         formulasDataArray.push({ key: key, value: formulasData[key] });
         }
-        document.getElementById('formulas-sumup-array').value = formulasDataArray;
         var formulasDataArrayString = JSON.stringify(formulasDataArray);
-        document.getElementById('formulas-sumup-array-string').value = formulasDataArrayString;
+        document.getElementById('formulas-array').value = formulasDataArrayString;
     });
 };
