@@ -1,4 +1,4 @@
-console.log("latest-4.8.4");
+console.log("latest-4.8.5");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -62,7 +62,6 @@ var endTimestamp = Math.floor(endDate.getTime() / 1000);
 // date fields
 const dateStart = document.querySelector('#date-start');
 const dateEnd = document.querySelector('#date-end');
-//const eventGid = document.querySelector('#c-booking-gid');
 
 dateStart.value = startTimestamp;
 dateEnd.value = endTimestamp;
@@ -83,7 +82,7 @@ for (element of options) {
         formulasData[unitXid] = unitCount;
         var targetTotal = 'tot' + unitXid;
         var formulaTotal = document.getElementById(targetTotal);
-        var optionTotal = unitCost * unitCount;
+        var optionTotal = (unitCost * unitCount).toFixed(2);
         console.log(unitCount + " : " + optionTotal);
         formulaTotal.innerText = optionTotal.toFixed(2);
         var sum = 0;
