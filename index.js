@@ -72,7 +72,7 @@ for (element of options) {
         });
         pageTotal.innerText = sum;
         pageDeposit.innerText = sum / 2;
-        console.log(formulasData);
+        console.log("input changed" + formulasData);
     });
 };
 /*
