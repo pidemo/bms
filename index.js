@@ -28,31 +28,19 @@ for (var i = 0; i < hashParams.length; i++) {
     var prefix = 'c-';
     var target = prefix.concat(p[0]);
     var decoded = decodeURIComponent(p[1]);
-    /*
-    console.log(target, decoded);
-    document.getElementById(p[0]).value = decoded;
-    document.getElementById(target).innerText = decoded;
-    */
     // Check if the element & target exists
     var element = document.getElementById(p[0]);
     if (element) { element.value = decoded; }
     var targetElement = document.getElementById(target);
     if (targetElement) { targetElement.innerText = decoded; }
-
 };
 
 const pageTotal = document.querySelector('#bookform-total');
 const pageDeposit = document.querySelector('#bookform-deposit');
 
-//var totalFunc = function () {
-//var formTotals = document.getElementsByClassName('form_option-total');
-//};
-
 const options = document.getElementsByClassName('form_option');
 for (element of options) {
-    //let prefix = 'full';
     let pretot = 'tot';
-
     let pageTotal = document.getElementById('bookform-total');
     let pageDeposit = document.getElementById('bookform-deposit');
     var childHelper = element.firstElementChild.firstElementChild;
@@ -64,12 +52,6 @@ for (element of options) {
         var unitCost = this.getAttribute('data-price');
         var unitXid = this.getAttribute('data-xid');
         var targetTotal = pretot.concat(unitXid);
-        
-        // to delete 
-        //var targetId = prefix.concat(unitXid);
-        //var fullString = unitCount.concat(unitXid);var fullString = unitCount.concat(unitXid);
-        //let targetField = this.nextElementSibling;
-        //targetField.value = fullString;
         var formulaTotal = document.getElementById(targetTotal);
         var optionTotal = unitCost * unitCount;
         formulaTotal.innerText = optionTotal;
@@ -79,7 +61,6 @@ for (element of options) {
         });
         pageTotal.innerText = sum;
         pageDeposit.innerText = sum / 2;
-        //console.log(sum);
     });
 };
 
@@ -142,5 +123,5 @@ function extractAndSubmit() {
     // You can include additional logic here if needed
 
     // Submit the form programmatically
-    //form.submit();
+    form.submit();
 }
