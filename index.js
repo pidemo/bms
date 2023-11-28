@@ -60,15 +60,13 @@ console.log(startDate, endDate);
 var startTimestamp = Math.floor(startDate.getTime() / 1000);
 var endTimestamp = Math.floor(endDate.getTime() / 1000);
 
-console.log(startTimestamp, endTimestamp);
-
 // date fields
 const dateStart = document.querySelector('#date-start');
 const dateEnd = document.querySelector('#date-end');
 const eventGid = document.querySelector('#event-gid');
 
-dateStart.value = null;
-dateEnd.value = null;
+dateStart.value = startTimestamp;
+dateEnd.value = endTimestamp;
 eventGid.value = null;
 
 
