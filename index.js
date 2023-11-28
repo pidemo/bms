@@ -14,7 +14,7 @@ mainForm.classList.add('hidden');
 document.getElementById("bookform-contact").value = "Pierre";
 document.getElementById("bookform-company").value = "Company";
 document.getElementById("bookform-email").value = "pierre@email.com";
-document.getElementById("bookform-people-2").value = 20;
+document.getElementById("bookform-people").value = 20;
 
 if (fullHash.includes('approved')) {
     document.querySelector('#main-form-veil').classList.remove('is-visible');
