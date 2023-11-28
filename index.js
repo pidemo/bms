@@ -12,10 +12,7 @@ document.getElementById("bookform-company").value = "Company";
 document.getElementById("bookform-email").value = "pierre@email.com";
 document.getElementById("bookform-people-2").value = 20;
 
-if (
-    //fullHash.includes('approved')
-    1 === 1
-) {
+if (fullHash.includes('approved')) {
     document.querySelector('#main-form-veil').classList.remove('is-visible');
     document.querySelector('#date-validation-form').remove();
     document.querySelector('#date-confirmation-wrap').classList.add('is-visible');
@@ -69,7 +66,7 @@ for (element of options) {
         });
         pageTotal.innerText = sum;
         pageDeposit.innerText = sum / 2;
-        
+
         // Convert the object to an arrat & set it to input value
         var formulasDataArray = [];
         for (var key in formulasData) {
