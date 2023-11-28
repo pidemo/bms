@@ -1,4 +1,4 @@
-console.log("latest-4.3");
+console.log("latest-4.4");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
