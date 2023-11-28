@@ -63,6 +63,7 @@ for (element of options) {
         var unitCount = this.value;
         var unitCost = this.getAttribute('data-price');
         var unitXid = this.getAttribute('data-xid');
+        console.log(unitCost, unitXid);
         var targetId = prefix.concat(unitXid);
         var targetTotal = pretot.concat(unitXid);
         var fullString = unitCount.concat(unitXid);
