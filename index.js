@@ -1,4 +1,4 @@
-console.log("latest-4.8.5.3");
+console.log("latest-4.8.5.4");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -55,18 +55,20 @@ var endDateString = dateString + ' ' + timeEndString;
 var startDate = new Date(startDateString);
 var endDate = new Date(endDateString);
 
-console.log(startDate, endDate);
+console.log("Step 1 :", startDate, endDate);
 
 // Format dates as strings
-//var startTimestamp = Math.floor(startDate.getTime() / 1000);
-//var endTimestamp = Math.floor(endDate.getTime() / 1000);
+var startTimestamp = Math.floor(startDate.getTime());
+var endTimestamp = Math.floor(endDate.getTime());
 
 // date fields
 const dateStart = document.querySelector('#date-start');
 const dateEnd = document.querySelector('#date-end');
 
-dateStart.value = startDate;
-dateEnd.value = endDate;
+dateStart.value = startTimestamp;
+dateEnd.value = endTimestamp;
+
+console.log("Step 2 :", startTimestamp, endTimestamp);
 
 var formulasData = {};
 const options = document.getElementsByClassName('form_option');
