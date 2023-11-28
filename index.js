@@ -1,3 +1,5 @@
+console.log("latest");
+
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 var fullHash = window.location.hash;
