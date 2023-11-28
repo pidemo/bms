@@ -51,23 +51,29 @@ var formulasData = [];
 const options = document.getElementsByClassName('form_option');
 for (element of options) {
     var childHelper = element.firstElementChild.firstElementChild;
-    var optionCost = childHelper.getAttribute('data-price');
+    //var optionCost = childHelper.getAttribute('data-price');
     var optionXid = childHelper.getAttribute('data-xid');
     var unitInput = element.getElementsByClassName('form_option-count')[0];
-    formulasData.push({ xid: optionXid, count: 0 });
+    formulasData[optionXid] = 0;
+
     unitInput.addEventListener("input", function (e) {
         var unitCount = this.value;
         var unitCost = this.getAttribute('data-price');
         var unitXid = this.getAttribute('data-xid');
+        /* Method 1
         // Update the formulasData array based on the input change
         var formulaDataIndex = formulasData.findIndex(data => data.xid === unitXid);
         if (formulaDataIndex !== -1) {
             formulasData[formulaDataIndex].count = unitCount;
-        }
+        }*/
+        // Method 2
+        formulasData[unitXid] = unitCount;
+
         var targetTotal = 'tot' + unitXid;
         var formulaTotal = document.getElementById(targetTotal);
         var optionTotal = unitCost * unitCount;
         formulaTotal.innerText = optionTotal;
+        
         var sum = 0;
         $('.form_option-total').each(function () {
             sum += Number($(this).text());
