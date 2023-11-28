@@ -97,7 +97,7 @@ for (element of options) {
         // Convert the object to an arrat & set it to input value
         var formulasDataArray = [];
         for (var key in formulasData) {
-        formulasDataArray.push({ key: key, value: formulasData[key] });
+        formulasDataArray.push({ key: key, value: Number(formulasData[key]) });
         }
         var formulasDataArrayString = JSON.stringify(formulasDataArray);
         document.getElementById('formulas-array').value = formulasDataArrayString;
