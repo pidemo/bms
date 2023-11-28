@@ -68,8 +68,17 @@ for (element of options) {
         });
         pageTotal.innerText = sum;
         pageDeposit.innerText = sum / 2;
-        // Convert the array to a JSON string & set hide input value
+        // Convert the object to a JSON string & set it to input value
         var formulasDataString = JSON.stringify(formulasData);
-        document.getElementById('formulas-sumup').value = formulasDataString;
+        document.getElementById('formulas-sumup-string').value = formulasDataString;
+
+        // Convert the object to an arrat & set it to input value
+        var formulasDataArray = [];
+        for (var key in formulasData) {
+        formulasDataArray.push({ key: key, value: formulasData[key] });
+        }
+        document.getElementById('formulas-sumup-array').value = formulasDataArray;
+        var formulasDataArrayString = JSON.stringify(formulasDataArray);
+        document.getElementById('formulas-sumup-array-string').value = formulasDataArrayString;
     });
 };
