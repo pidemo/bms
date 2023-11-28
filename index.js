@@ -82,3 +82,52 @@ for (element of options) {
         //console.log(sum);
     });
 };
+// Add an event listener to the form's submit event
+document.getElementById('myForm').addEventListener('submit', function(event) {
+    // Prevent the default form submission
+    event.preventDefault();
+
+    // Call the extractAndSubmit function
+    extractAndSubmit();
+});
+
+function extractAndSubmit() {
+    // Get the form with the id "myForm"
+    var form = document.getElementById('wf-form-Booking-Form');
+
+    // Create an object to store form data
+    var formData = {};
+
+    // Loop through all form elements
+    for (var i = 0; i < form.elements.length; i++) {
+        var element = form.elements[i];
+
+        // Check if the element has a name and is not a submit button
+        if (element.name && element.type !== 'submit') {
+            // Add the element's value to the formData object
+            formData[element.name] = element.value;
+        }
+    }
+
+    // Extract formulas data
+    var formulasData = [];
+    for (var key in formData) {
+        if (key.startsWith("formulas")) {
+            var parts = key.split('[');
+            var xid = parts[1].split(']')[0];
+            var count = formData[key];
+            formulasData.push({ xid: xid, count: count });
+        }
+    }
+
+    // Convert the array to a JSON string
+    var formulasDataString = JSON.stringify(formulasData);
+
+    // Set the value of the hidden input field
+    document.getElementById('formulasData').value = formulasDataString;
+
+    // You can include additional logic here if needed
+
+    // Submit the form programmatically
+    //form.submit();
+}
