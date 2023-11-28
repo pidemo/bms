@@ -85,7 +85,7 @@ for (element of options) {
 
 // Form Prefill Testing
 
-document.getElementById("bookform-name").value = "Pierre";
+document.getElementById("bookform-contact").value = "Pierre";
 document.getElementById("bookform-company").value = "Company";
 document.getElementById("bookform-email").value = "pierre@email.com";
 document.getElementById("bookform-people-2").value = 20;
