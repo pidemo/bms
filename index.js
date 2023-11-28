@@ -71,7 +71,6 @@ for (element of options) {
         //let targetField = this.nextElementSibling;
         //targetField.value = fullString;
         var formulaTotal = document.getElementById(targetTotal);
-        console.log("input");
         var optionTotal = unitCost * unitCount;
         formulaTotal.innerText = optionTotal;
         var sum = 0;
