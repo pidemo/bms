@@ -60,8 +60,12 @@ var startTimestamp = Math.floor(startDate.getTime() / 1000);
 var endTimestamp = Math.floor(endDate.getTime() / 1000);
 
 // date fields
-const dateStart = document.querySelector('#date-start');
-const dateEnd = document.querySelector('#date-end');
+// const dateStart = document.querySelector('#date-start');
+// const dateEnd = document.querySelector('#date-end');
+
+// date fields
+const dateStart = startDate;
+const dateEnd = endDate;
 
 dateStart.value = startTimestamp;
 dateEnd.value = endTimestamp;
