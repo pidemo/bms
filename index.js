@@ -42,6 +42,36 @@ for (var i = 0; i < hashParams.length; i++) {
 const pageTotal = document.querySelector('#bookform-total');
 const pageDeposit = document.querySelector('#bookform-deposit');
 
+// Date & GID auto fill
+var dateString = document.getElementById('c-booking-date').textContent;
+var timeString = document.getElementById('c-booking-time').textContent;
+var timeEndString = document.getElementById('c-booking-time-end').textContent;
+
+// Concatenate date and time strings
+var startDateString = dateString + ' ' + timeString;
+var endDateString = dateString + ' ' + timeEndString;
+
+// Parse date strings into Date objects
+var startDate = new Date(startDateString);
+var endDate = new Date(endDateString);
+
+console.log(startDate, endDate);
+// Format dates as strings
+var formattedStartDate = startDate.toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true });
+var formattedEndDate = endDate.toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true });
+
+console.log(formattedStartDate, formattedEndDate);
+
+// date fields
+const dateStart = document.querySelector('date-start');
+const dateEnd = document.querySelector('date-end');
+const eventGid = document.querySelector('event-gid');
+
+dateStart.value = null;
+dateEnd.value = null;
+eventGid.value = null;
+
+
 var formulasData = {};
 const options = document.getElementsByClassName('form_option');
 for (element of options) {
