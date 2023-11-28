@@ -50,7 +50,7 @@ const pageDeposit = document.querySelector('#bookform-deposit');
 
 const options = document.getElementsByClassName('form_option');
 for (element of options) {
-    let prefix = 'full';
+    //let prefix = 'full';
     let pretot = 'tot';
 
     let pageTotal = document.getElementById('bookform-total');
@@ -63,14 +63,15 @@ for (element of options) {
         var unitCount = this.value;
         var unitCost = this.getAttribute('data-price');
         var unitXid = this.getAttribute('data-xid');
-        console.log(unitCost, unitXid);
-        var targetId = prefix.concat(unitXid);
         var targetTotal = pretot.concat(unitXid);
-        var fullString = unitCount.concat(unitXid);
-        let targetField = this.nextElementSibling;
+        
+        // to delete 
+        //var targetId = prefix.concat(unitXid);
+        //var fullString = unitCount.concat(unitXid);var fullString = unitCount.concat(unitXid);
+        //let targetField = this.nextElementSibling;
+        //targetField.value = fullString;
         var formulaTotal = document.getElementById(targetTotal);
         console.log("input");
-        targetField.value = fullString;
         var optionTotal = unitCost * unitCount;
         formulaTotal.innerText = optionTotal;
         var sum = 0;
