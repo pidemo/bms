@@ -52,6 +52,8 @@ for (element of options) {
         var unitCost = this.getAttribute('data-price');
         var unitXid = this.getAttribute('data-xid');
         var targetTotal = pretot.concat(unitXid);
+        var targetTotalX = 'tot' + unitXid;
+        console.log(targetTotal,targetTotalX);
         var formulaTotal = document.getElementById(targetTotal);
         var optionTotal = unitCost * unitCount;
         formulaTotal.innerText = optionTotal;
@@ -74,20 +76,17 @@ document.getElementById("bookform-people-2").value = 20;
 
 
 // Form Math on Page
+var form = document.getElementById('wf-form-Booking-Form');
+form.preventDefault();
 
 // Add an event listener to the form's submit event
-document.getElementById('wf-form-Booking-Form').addEventListener('submit', function(event) {
-    // Prevent the default form submission
-    event.preventDefault();
-
+form.addEventListener('submit', function(event) {
     // Call the extractAndSubmit function
     extractAndSubmit();
 });
 
 function extractAndSubmit() {
-    // Get the form with the id "myForm"
-    var form = document.getElementById('wf-form-Booking-Form');
-
+    
     // Create an object to store form data
     var formData = {};
 
