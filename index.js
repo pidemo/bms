@@ -1,4 +1,4 @@
-console.log("latest-4.8.5");
+console.log("latest-4.8.5.1");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -88,7 +88,7 @@ for (element of options) {
         var formulaTotal = document.getElementById(targetTotal);
         var optionTotal = (unitCost * unitCount).toFixed(2);
         console.log(unitCount + " : " + optionTotal);
-        formulaTotal.innerText = optionTotal.toFixed(2);
+        formulaTotal.innerText = Number(optionTotal).toFixed(2);
         var sum = 0;
         var newTest = document.querySelectorAll(".form_option-total");
         for (element of newTest) {
