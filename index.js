@@ -74,7 +74,12 @@ for (element of options) {
         });
         pageTotal.innerText = sum;
         pageDeposit.innerText = sum / 2;
-        console.log(formulasData);
+        // Convert the array to a JSON string
+        var formulasDataString = JSON.stringify(formulasData);
+
+        // Set the value of the hidden input field
+        document.getElementById('formulasData').value = formulasData;
+        document.getElementById('formulasDataString').value = formulasDataString;
     });
 };
 /*
