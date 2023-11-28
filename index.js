@@ -84,7 +84,7 @@ for (element of options) {
         var targetTotal = 'tot' + unitXid;
         var formulaTotal = document.getElementById(targetTotal);
         var optionTotal = unitCost * unitCount;
-        console.log(optionTotal);
+        console.log(unitCount + " : " + optionTotal);
         formulaTotal.innerText = optionTotal.toFixed(2);
         var sum = 0;
         var newTest = document.querySelectorAll(".form_option-total");
