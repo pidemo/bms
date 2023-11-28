@@ -88,8 +88,8 @@ for (element of options) {
         var sum = 0;
         var newTest = document.querySelectorAll(".form_option-total");
         for (element of newTest) {
-            sum += Number(this.value);
-            console.log(sum);
+            //sum += Number(this.value);
+            console.log(this.value);
         }
         pageTotal.innerText = sum;
         pageDeposit.innerText = sum / 2;
