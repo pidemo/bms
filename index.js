@@ -1,4 +1,4 @@
-console.log("latest-4.4");
+console.log("latest-4.5");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -63,9 +63,9 @@ var formattedEndDate = endDate.toLocaleString('en-US', { weekday: 'long', year: 
 console.log(formattedStartDate, formattedEndDate);
 
 // date fields
-const dateStart = document.querySelector('date-start');
-const dateEnd = document.querySelector('date-end');
-const eventGid = document.querySelector('event-gid');
+const dateStart = document.querySelector('#date-start');
+const dateEnd = document.querySelector('#date-end');
+const eventGid = document.querySelector('#event-gid');
 
 dateStart.value = null;
 dateEnd.value = null;
