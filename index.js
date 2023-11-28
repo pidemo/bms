@@ -1,4 +1,4 @@
-console.log("latest-4");
+console.log("latest-4.1");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -47,7 +47,7 @@ for (var i = 0; i < hashParams.length; i++) {
 const pageTotal = document.querySelector('#bookform-total');
 const pageDeposit = document.querySelector('#bookform-deposit');
 
-var formulasData = [];
+var formulasData = {};
 const options = document.getElementsByClassName('form_option');
 for (element of options) {
     var childHelper = element.firstElementChild.firstElementChild;
