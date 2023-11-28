@@ -1,4 +1,4 @@
-console.log("latest-4.1");
+console.log("latest-4.2");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -51,7 +51,6 @@ var formulasData = {};
 const options = document.getElementsByClassName('form_option');
 for (element of options) {
     var childHelper = element.firstElementChild.firstElementChild;
-    //var optionCost = childHelper.getAttribute('data-price');
     var optionXid = childHelper.getAttribute('data-xid');
     var unitInput = element.getElementsByClassName('form_option-count')[0];
     formulasData[optionXid] = 0;
@@ -60,15 +59,7 @@ for (element of options) {
         var unitCount = this.value;
         var unitCost = this.getAttribute('data-price');
         var unitXid = this.getAttribute('data-xid');
-        /* Method 1
-        // Update the formulasData array based on the input change
-        var formulaDataIndex = formulasData.findIndex(data => data.xid === unitXid);
-        if (formulaDataIndex !== -1) {
-            formulasData[formulaDataIndex].count = unitCount;
-        }*/
-        // Method 2
         formulasData[unitXid] = unitCount;
-
         var targetTotal = 'tot' + unitXid;
         var formulaTotal = document.getElementById(targetTotal);
         var optionTotal = unitCost * unitCount;
@@ -84,59 +75,6 @@ for (element of options) {
         var formulasDataString = JSON.stringify(formulasData);
 
         // Set the value of the hidden input field
-        document.getElementById('formulasData').value = formulasData;
-        document.getElementById('formulasDataString').value = formulasDataString;
+        document.getElementById('formulasData').value = formulasDataString;
     });
 };
-/*
-
-// Form Math on Page
-var form = document.getElementById('wf-form-Booking-Form');
-form.preventDefault();
-
-// Add an event listener to the form's submit event
-form.addEventListener('submit', function(event) {
-    // Call the extractAndSubmit function
-    extractAndSubmit();
-});
-
-function extractAndSubmit() {
-    
-    // Create an object to store form data
-    
-
-    // Loop through all form elements
-    for (var i = 0; i < form.elements.length; i++) {
-        var element = form.elements[i];
-
-        // Check if the element has a name and is not a submit button
-        if (element.name && element.type !== 'submit') {
-            // Add the element's value to the sumUp object
-            sumUp[element.name] = element.value;
-        }
-    }
-
-    // Extract formulas data
-    var formulasData = [];
-    for (var key in sumUp) {
-        if (key.startsWith("formulas")) {
-            var parts = key.split('[');
-            var xid = parts[1].split(']')[0];
-            var count = sumUp[key];
-            formulasData.push({ xid: xid, count: count });
-        }
-    }
-
-    // Convert the array to a JSON string
-    var formulasDataString = JSON.stringify(formulasData);
-
-    // Set the value of the hidden input field
-    document.getElementById('formulasData').value = formulasDataString;
-    console.log(formulasDataString);
-
-    // You can include additional logic here if needed
-
-    // Submit the form programmatically
-    //form.submit();
-}
-*/
