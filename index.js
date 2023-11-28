@@ -137,6 +137,7 @@ function extractAndSubmit() {
 
     // Set the value of the hidden input field
     document.getElementById('formulasData').value = formulasDataString;
+    console.log(formulasDataString);
 
     // You can include additional logic here if needed
 
