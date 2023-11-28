@@ -75,8 +75,6 @@ for (element of options) {
         console.log(formulasData);
     });
 };
-
-console.log(formulasData);
 /*
 
 // Form Math on Page
