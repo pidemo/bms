@@ -123,5 +123,5 @@ function extractAndSubmit() {
     // You can include additional logic here if needed
 
     // Submit the form programmatically
-    form.submit();
+    //form.submit();
 }
