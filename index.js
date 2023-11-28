@@ -95,7 +95,7 @@ document.getElementById("bookform-people-2").value = 20;
 // Form Math on Page
 
 // Add an event listener to the form's submit event
-document.getElementById('myForm').addEventListener('submit', function(event) {
+document.getElementById('wf-form-Booking-Form').addEventListener('submit', function(event) {
     // Prevent the default form submission
     event.preventDefault();
 
