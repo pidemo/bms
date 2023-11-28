@@ -1,9 +1,17 @@
-console.log("loaded");
+// Form Prefill Testing
+mainForm.classList.add('hidden');
+document.getElementById("bookform-contact").value = "Pierre";
+document.getElementById("bookform-company").value = "Company";
+document.getElementById("bookform-email").value = "pierre@email.com";
+document.getElementById("bookform-people-2").value = 20;
+
+
+// Main Script
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 var fullHash = window.location.hash;
 var mainForm = document.querySelector('#main-form-wrap');
-mainForm.classList.add('hidden');
+var sumUp = {};
 
 if (
     //fullHash.includes('approved')
@@ -38,12 +46,14 @@ for (var i = 0; i < hashParams.length; i++) {
 const pageTotal = document.querySelector('#bookform-total');
 const pageDeposit = document.querySelector('#bookform-deposit');
 
+var formulasData = [];
 const options = document.getElementsByClassName('form_option');
 for (element of options) {
     var childHelper = element.firstElementChild.firstElementChild;
     var optionCost = childHelper.getAttribute('data-price');
     var optionXid = childHelper.getAttribute('data-xid');
     var unitInput = element.getElementsByClassName('form_option-count')[0];
+    formulasData.push({ xid: xid, count: count });
     unitInput.addEventListener("input", function (e) {
         var unitCount = this.value;
         var unitCost = this.getAttribute('data-price');
@@ -61,12 +71,6 @@ for (element of options) {
     });
 };
 
-// Form Prefill Testing
-
-document.getElementById("bookform-contact").value = "Pierre";
-document.getElementById("bookform-company").value = "Company";
-document.getElementById("bookform-email").value = "pierre@email.com";
-document.getElementById("bookform-people-2").value = 20;
 
 
 
@@ -79,11 +83,11 @@ form.addEventListener('submit', function(event) {
     // Call the extractAndSubmit function
     extractAndSubmit();
 });
-
+/*
 function extractAndSubmit() {
     
     // Create an object to store form data
-    var formData = {};
+    
 
     // Loop through all form elements
     for (var i = 0; i < form.elements.length; i++) {
@@ -91,18 +95,18 @@ function extractAndSubmit() {
 
         // Check if the element has a name and is not a submit button
         if (element.name && element.type !== 'submit') {
-            // Add the element's value to the formData object
-            formData[element.name] = element.value;
+            // Add the element's value to the sumUp object
+            sumUp[element.name] = element.value;
         }
     }
 
     // Extract formulas data
     var formulasData = [];
-    for (var key in formData) {
+    for (var key in sumUp) {
         if (key.startsWith("formulas")) {
             var parts = key.split('[');
             var xid = parts[1].split(']')[0];
-            var count = formData[key];
+            var count = sumUp[key];
             formulasData.push({ xid: xid, count: count });
         }
     }
