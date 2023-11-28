@@ -41,6 +41,10 @@ for (var i = 0; i < hashParams.length; i++) {
     if (element) { element.value = decoded; }
     var targetElement = document.getElementById(target);
     if (targetElement) { targetElement.innerText = decoded; }
+    // Add booking GID to matching field
+    if (target == "booking-gid") {
+        console.log(decoded);
+    }
 };
 
 const pageTotal = document.querySelector('#bookform-total');
