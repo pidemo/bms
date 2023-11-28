@@ -57,6 +57,11 @@ for (element of options) {
         var unitCount = this.value;
         var unitCost = this.getAttribute('data-price');
         var unitXid = this.getAttribute('data-xid');
+        // Update the formulasData array based on the input change
+        var formulaDataIndex = formulasData.findIndex(data => data.xid === unitXid);
+        if (formulaDataIndex !== -1) {
+            formulasData[formulaDataIndex].count = unitCount;
+        }
         var targetTotal = 'tot' + unitXid;
         var formulaTotal = document.getElementById(targetTotal);
         var optionTotal = unitCost * unitCount;
@@ -67,6 +72,7 @@ for (element of options) {
         });
         pageTotal.innerText = sum;
         pageDeposit.innerText = sum / 2;
+        console.log(formulasData);
     });
 };
 
