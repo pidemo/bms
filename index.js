@@ -1,3 +1,9 @@
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+var fullHash = window.location.hash;
+var mainForm = document.querySelector('#main-form-wrap');
+var sumUp = {};
+
 // Form Prefill Testing
 mainForm.classList.add('hidden');
 document.getElementById("bookform-contact").value = "Pierre";
@@ -5,13 +11,6 @@ document.getElementById("bookform-company").value = "Company";
 document.getElementById("bookform-email").value = "pierre@email.com";
 document.getElementById("bookform-people-2").value = 20;
 
-
-// Main Script
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-var fullHash = window.location.hash;
-var mainForm = document.querySelector('#main-form-wrap');
-var sumUp = {};
 
 if (
     //fullHash.includes('approved')
