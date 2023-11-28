@@ -57,10 +57,10 @@ var endDate = new Date(endDateString);
 
 console.log(startDate, endDate);
 // Format dates as strings
-var formattedStartDate = startDate.toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true });
-var formattedEndDate = endDate.toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true });
+var startTimestamp = Math.floor(startDate.getTime() / 1000);
+var endTimestamp = Math.floor(endDate.getTime() / 1000);
 
-console.log(formattedStartDate, formattedEndDate);
+console.log(startTimestamp, endTimestamp);
 
 // date fields
 const dateStart = document.querySelector('#date-start');
