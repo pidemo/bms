@@ -1,4 +1,4 @@
-console.log("latest-4.8.5.4");
+console.log("latest-4.8.5.5");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -94,8 +94,8 @@ for (element of options) {
         for (element of newTest) {
             sum += Number(element.innerText);
         }
-        pageTotal.innerText = sum;
-        pageDeposit.innerText = sum / 2;
+        pageTotal.innerText = sum.toFixed(2);
+        pageDeposit.innerText = (sum / 2).toFixed(2);
 
         // Convert the object to an arrat & set it to input value
         var formulasDataArray = [];
