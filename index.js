@@ -40,9 +40,6 @@ const pageDeposit = document.querySelector('#bookform-deposit');
 
 const options = document.getElementsByClassName('form_option');
 for (element of options) {
-    let pretot = 'tot';
-    let pageTotal = document.getElementById('bookform-total');
-    let pageDeposit = document.getElementById('bookform-deposit');
     var childHelper = element.firstElementChild.firstElementChild;
     var optionCost = childHelper.getAttribute('data-price');
     var optionXid = childHelper.getAttribute('data-xid');
@@ -51,9 +48,7 @@ for (element of options) {
         var unitCount = this.value;
         var unitCost = this.getAttribute('data-price');
         var unitXid = this.getAttribute('data-xid');
-        var targetTotal = pretot.concat(unitXid);
-        var targetTotalX = 'tot' + unitXid;
-        console.log(targetTotal,targetTotalX);
+        var targetTotal = 'tot' + unitXid;
         var formulaTotal = document.getElementById(targetTotal);
         var optionTotal = unitCost * unitCount;
         formulaTotal.innerText = optionTotal;
