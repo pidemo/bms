@@ -82,6 +82,18 @@ for (element of options) {
         //console.log(sum);
     });
 };
+
+// Form Prefill Testing
+
+document.getElementById("bookform-name").value = "Pierre";
+document.getElementById("bookform-company").value = "Company";
+document.getElementById("bookform-email").value = "pierre@email.com";
+document.getElementById("bookform-people-2").value = 20;
+
+
+
+// Form Math on Page
+
 // Add an event listener to the form's submit event
 document.getElementById('myForm').addEventListener('submit', function(event) {
     // Prevent the default form submission
