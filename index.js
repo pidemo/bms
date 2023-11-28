@@ -1,4 +1,4 @@
-console.log("latest");
+console.log("latest-2");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -74,7 +74,7 @@ for (element of options) {
         });
         pageTotal.innerText = sum;
         pageDeposit.innerText = sum / 2;
-        console.log("input changed" + formulasData);
+        console.log(formulasData);
     });
 };
 /*
