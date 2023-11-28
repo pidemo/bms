@@ -70,6 +70,6 @@ for (element of options) {
         pageDeposit.innerText = sum / 2;
         // Convert the array to a JSON string & set hide input value
         var formulasDataString = JSON.stringify(formulasData);
-        document.getElementById('formulasData').value = formulasDataString;
+        document.getElementById('formulas-sumup').value = formulasDataString;
     });
 };
