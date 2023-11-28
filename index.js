@@ -1,13 +1,9 @@
-console.log("latest-4.8.1");
+console.log("latest-4.8.3");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 var fullHash = window.location.hash;
 var mainForm = document.querySelector('#main-form-wrap');
-
-var bookingGid = urlParams.get('booking-gid');
-console.log(bookingGid);
-console.log(URLSearchParams);
 
 // Form Prefill Testing
 mainForm.classList.add('hidden');
@@ -59,7 +55,6 @@ var endDateString = dateString + ' ' + timeEndString;
 var startDate = new Date(startDateString);
 var endDate = new Date(endDateString);
 
-console.log(startDate, endDate);
 // Format dates as strings
 var startTimestamp = Math.floor(startDate.getTime() / 1000);
 var endTimestamp = Math.floor(endDate.getTime() / 1000);
@@ -71,9 +66,6 @@ const dateEnd = document.querySelector('#date-end');
 
 dateStart.value = startTimestamp;
 dateEnd.value = endTimestamp;
-//eventGid.value = bookingGid;
-//console.log(bookingGid);
-
 
 var formulasData = {};
 const options = document.getElementsByClassName('form_option');
