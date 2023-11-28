@@ -123,3 +123,4 @@ function extractAndSubmit() {
     // Submit the form programmatically
     //form.submit();
 }
+*/
