@@ -46,6 +46,7 @@ const pageDeposit = document.querySelector('#bookform-deposit');
 var dateString = document.getElementById('c-booking-date').textContent;
 var timeString = document.getElementById('c-booking-time').textContent;
 var timeEndString = document.getElementById('c-booking-time-end').textContent;
+var bookingGid = urlParams.get('booking-gid');
 
 // Concatenate date and time strings
 var startDateString = dateString + ' ' + timeString;
@@ -67,7 +68,7 @@ const eventGid = document.querySelector('#event-gid');
 
 dateStart.value = startTimestamp;
 dateEnd.value = endTimestamp;
-eventGid.value = null;
+eventGid.value = bookingGid;
 
 
 var formulasData = {};
