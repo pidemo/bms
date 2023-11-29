@@ -1,4 +1,4 @@
-console.log("latest-4.8.6.2");
+console.log("latest-4.8.6.3");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -6,7 +6,7 @@ var fullHash = window.location.hash;
 var mainForm = document.querySelector('#main-form-wrap');
 
 // Form Prefill Testing
-mainForm.classList.add('hidden');
+//mainForm.classList.add('hidden');
 document.getElementById("bookform-contact").value = "Pierre";
 document.getElementById("bookform-company").value = "Company";
 document.getElementById("bookform-email").value = "pierre@email.com";
