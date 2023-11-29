@@ -11,23 +11,12 @@ document.getElementById("bookform-contact").value = "Pierre";
 document.getElementById("bookform-company").value = "Company";
 document.getElementById("bookform-email").value = "pierre@email.com";
 document.getElementById("bookform-people").value = 20;
+document.querySelector("#resto-xid").value = 58;
 
-if (
-    //fullHash.includes('approved')
-    1 === 1
-    ) {
-    document.querySelector('#main-form-veil').classList.remove('is-visible');
-    document.querySelector('#date-validation-form').remove();
-    document.querySelector('#date-confirmation-wrap').classList.add('is-visible');
-    mainForm.classList.remove('hidden');
-} else {
-    document.querySelector('#main-form-veil').classList.add('is-visible');
-};
-
-if (fullHash.includes('denied')) {
-    document.querySelector('#bookform-denied').classList.add('is-visible');
-};
-
+document.querySelector('#main-form-veil').classList.remove('is-visible');
+document.querySelector('#date-validation-form').remove();
+document.querySelector('#date-confirmation-wrap').classList.add('is-visible');
+mainForm.classList.remove('hidden');
 
 var request = document.getElementById("c-request"); 
 var bookingDate = document.getElementById("c-bookig-date");
