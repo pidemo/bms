@@ -1,4 +1,4 @@
-console.log("latest-4.8.6.1");
+console.log("latest-4.8.6.2");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -12,7 +12,7 @@ document.getElementById("bookform-company").value = "Company";
 document.getElementById("bookform-email").value = "pierre@email.com";
 document.getElementById("bookform-people").value = 20;
 
-/*
+
 let mainSection = document.querySelector("#bookform-content");
 let successSection = document.querySelector("#bookform-successful");
 let mainFormVeil = document.querySelector('#main-form-veil');
@@ -24,38 +24,20 @@ if (fullHash.includes('approved')) {
     mainFormVeil.classList.remove('is-visible');
     dateForm.remove();
     dateConfirmation.classList.add('is-visible');
-    mainForm.classList.remove('is-hidden');
-    successSection.classList.remove('is-visible');
+    mainForm.classList.remove('hidden');
 } else {
     mainFormVeil.classList.add('is-visible');
-    dateConfirmation.classList.remove('is-visible');
-    mainForm.classList.add('is-hidden');
-    successSection.classList.remove('is-visible');
 };
 
 if (fullHash.includes('denied')) {
     dateDenied.classList.add('is-visible');
 };
-
-// Add prefill fucntion for validation
 if (fullHash.includes('successful')) {
-    mainSection.classList.remove('is-visible');
-    successSection.classList.remove('is-visible');
-};
-
-*/
-
-if (fullHash.includes('approved')) {
-    document.querySelector('#main-form-veil').classList.remove('is-visible');
-    document.querySelector('#date-validation-form').remove();
-    document.querySelector('#date-confirmation-wrap').classList.add('is-visible');
-    mainForm.classList.remove('hidden');
+    mainSection.classList.add('is-hidden');
+    successSection.classList.add('is-visible');
 } else {
-    document.querySelector('#main-form-veil').classList.add('is-visible');
-};
-
-if (fullHash.includes('denied')) {
-    document.querySelector('#bookform-denied').classList.add('is-visible');
+    successSection.classList.remove('is-visible');
+    mainSection.classList.remove('is-hidden');
 };
 
 //form prefill based on URL params :
