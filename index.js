@@ -1,4 +1,4 @@
-console.log("latest-4.8.5.5");
+console.log("latest-4.8.6");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -12,17 +12,34 @@ document.getElementById("bookform-company").value = "Company";
 document.getElementById("bookform-email").value = "pierre@email.com";
 document.getElementById("bookform-people").value = 20;
 
+let mainSection = document.querySelector("#bookform-content");
+let successSection = document.querySelector("#bookform-successful");
+let mainFormVeil = document.querySelector('#main-form-veil');
+let dateForm = document.querySelector('#date-validation-form');
+let dateConfirmation = document.querySelector('#date-confirmation-wrap');
+let dateDenied = document.querySelector('#bookform-denied');
+
 if (fullHash.includes('approved')) {
-    document.querySelector('#main-form-veil').classList.remove('is-visible');
-    document.querySelector('#date-validation-form').remove();
-    document.querySelector('#date-confirmation-wrap').classList.add('is-visible');
-    mainForm.classList.remove('hidden');
+    mainFormVeil.classList.remove('is-visible');
+    dateForm.remove();
+    dateConfirmation.classList.add('is-visible');
+    mainForm.classList.remove('is-hidden');
+    successSection.classList.remove('is-visible');
 } else {
-    document.querySelector('#main-form-veil').classList.add('is-visible');
+    mainFormVeil.classList.add('is-visible');
+    dateConfirmation.classList.remove('is-visible');
+    mainForm.classList.add('is-hidden');
+    successSection.classList.remove('is-visible');
 };
 
 if (fullHash.includes('denied')) {
-    document.querySelector('#bookform-denied').classList.add('is-visible');
+    dateDenied.classList.add('is-visible');
+};
+
+// Add prefill fucntion for validation
+if (fullHash.includes('successful')) {
+    mainSection.classList.remove('is-visible');
+    successSection.classList.remove('is-visible');
 };
 
 //form prefill based on URL params :
