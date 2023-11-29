@@ -1,4 +1,4 @@
-console.log("latest-4.8.5.5");
+console.log("latest-4.8.6");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -28,19 +28,18 @@ if (fullHash.includes('denied')) {
     document.querySelector('#bookform-denied').classList.add('is-visible');
 };
 
-//form prefill based on URL params :
-var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
-for (var i = 0; i < hashParams.length; i++) {
-    var p = hashParams[i].split('=');
-    var prefix = 'c-';
-    var target = prefix.concat(p[0]);
-    var decoded = decodeURIComponent(p[1]);
-    // Check if the element & target exists
-    var element = document.getElementById(p[0]);
-    if (element) { element.value = decoded; }
-    var targetElement = document.getElementById(target);
-    if (targetElement) { targetElement.innerText = decoded; }
-};
+
+var request = document.getElementById("c-request"); 
+var bookingDate = document.getElementById("c-bookig-date");
+var bookingTime = document.getElementById("c-booking-time");
+var bookingEnd = document.getElementById("c-booking-time-end");
+var bookingGid = document.getElementById("c-booking-gid");
+
+if (request) {request.innerText = "approved";}
+if (bookingDate) {bookingDate.innerText = "2023-12-19";}
+if (bookingTime) {bookingTime.innerText = "06:00 PM";}
+if (bookingEnd) {bookingEnd.innerText = "09:00 PM";}
+if (bookingGid) {bookingGid.innerText = "55u0eit8om5tqgt2guepuqls0s";}
 
 const pageTotal = document.querySelector('#bookform-total');
 const pageDeposit = document.querySelector('#bookform-deposit');
