@@ -1,10 +1,10 @@
-console.log("latest-4.8.6.5");
+console.log("latest-4.8.6.6");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 var fullHash = window.location.hash;
-var mainForm = document.querySelector('#main-form-wrap');
 
+var mainForm = document.querySelector('#main-form-wrap');
 let mainSection = document.querySelector("#bookform-content");
 let successSection = document.querySelector("#bookform-successful");
 let mainFormVeil = document.querySelector('#main-form-veil');
@@ -19,7 +19,7 @@ if (fullHash.includes('approved')) {
     mainFormVeil.classList.remove('is-visible');
     dateForm.remove();
     dateConfirmation.classList.add('is-visible');
-    mainForm.classList.remove('hidden');
+    mainForm.classList.remove('is-hidden');
 } else {
     console.log("not approved");
     mainFormVeil.classList.add('is-visible');
