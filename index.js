@@ -1,17 +1,9 @@
-console.log("latest-4.8.6.4");
+console.log("latest-4.8.6.5");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 var fullHash = window.location.hash;
 var mainForm = document.querySelector('#main-form-wrap');
-mainForm.classList.add('is-hidden');
-
-/* Form Prefill Testing
-document.getElementById("bookform-contact").value = "Pierre";
-document.getElementById("bookform-company").value = "Company";
-document.getElementById("bookform-email").value = "pierre@email.com";
-document.getElementById("bookform-people").value = 20;
-*/
 
 let mainSection = document.querySelector("#bookform-content");
 let successSection = document.querySelector("#bookform-successful");
@@ -20,25 +12,39 @@ let dateForm = document.querySelector('#date-validation-form');
 let dateConfirmation = document.querySelector('#date-confirmation-wrap');
 let dateDenied = document.querySelector('#bookform-denied');
 
+mainForm.classList.add('is-hidden');
+
 if (fullHash.includes('approved')) {
+    console.log("approved");
     mainFormVeil.classList.remove('is-visible');
     dateForm.remove();
     dateConfirmation.classList.add('is-visible');
     mainForm.classList.remove('hidden');
 } else {
+    console.log("not approved");
     mainFormVeil.classList.add('is-visible');
 };
 
 if (fullHash.includes('denied')) {
+    console.log("denied");
     dateDenied.classList.add('is-visible');
 };
 if (fullHash.includes('successful')) {
+    console.log("successful");
     mainSection.classList.add('is-hidden');
     successSection.classList.add('is-visible');
 } else {
+    console.log("not-successful");
     successSection.classList.remove('is-visible');
     mainSection.classList.remove('is-hidden');
 };
+
+/* Form Prefill Testing
+document.getElementById("bookform-contact").value = "Pierre";
+document.getElementById("bookform-company").value = "Company";
+document.getElementById("bookform-email").value = "pierre@email.com";
+document.getElementById("bookform-people").value = 20;
+*/
 
 //form prefill based on URL params :
 var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
