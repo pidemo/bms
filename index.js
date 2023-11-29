@@ -1,4 +1,12 @@
-console.log("latest-4.8.6.6");
+console.log("latest-4.8.7");
+
+/* 
+// Form Prefill Testing
+document.getElementById("bookform-contact").value = "Pierre";
+document.getElementById("bookform-company").value = "Company";
+document.getElementById("bookform-email").value = "pierre@email.com";
+document.getElementById("bookform-people").value = 20;
+*/
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -15,36 +23,24 @@ let dateDenied = document.querySelector('#bookform-denied');
 mainForm.classList.add('is-hidden');
 
 if (fullHash.includes('approved')) {
-    console.log("approved");
     mainFormVeil.classList.remove('is-visible');
     dateForm.remove();
     dateConfirmation.classList.add('is-visible');
     mainForm.classList.remove('is-hidden');
 } else {
-    console.log("not approved");
     mainFormVeil.classList.add('is-visible');
 };
 
 if (fullHash.includes('denied')) {
-    console.log("denied");
     dateDenied.classList.add('is-visible');
 };
 if (fullHash.includes('successful')) {
-    console.log("successful");
     mainSection.classList.add('is-hidden');
     successSection.classList.add('is-visible');
 } else {
-    console.log("not-successful");
     successSection.classList.remove('is-visible');
     mainSection.classList.remove('is-hidden');
 };
-
-/* Form Prefill Testing
-document.getElementById("bookform-contact").value = "Pierre";
-document.getElementById("bookform-company").value = "Company";
-document.getElementById("bookform-email").value = "pierre@email.com";
-document.getElementById("bookform-people").value = 20;
-*/
 
 //form prefill based on URL params :
 var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
@@ -53,7 +49,6 @@ for (var i = 0; i < hashParams.length; i++) {
     var prefix = 'c-';
     var target = prefix.concat(p[0]);
     var decoded = decodeURIComponent(p[1]);
-    // Check if the element & target exists
     var element = document.getElementById(p[0]);
     if (element) { element.value = decoded; }
     var targetElement = document.getElementById(target);
@@ -76,8 +71,6 @@ var endDateString = dateString + ' ' + timeEndString;
 var startDate = new Date(startDateString);
 var endDate = new Date(endDateString);
 
-console.log("Step 1 :", startDate, endDate);
-
 // Format dates as strings
 var startTimestamp = Math.floor(startDate.getTime());
 var endTimestamp = Math.floor(endDate.getTime());
@@ -88,8 +81,6 @@ const dateEnd = document.querySelector('#date-end');
 
 dateStart.value = startTimestamp;
 dateEnd.value = endTimestamp;
-
-console.log("Step 2 :", startTimestamp, endTimestamp);
 
 var formulasData = {};
 const options = document.getElementsByClassName('form_option');
@@ -108,7 +99,6 @@ for (element of options) {
         var targetTotal = 'tot' + unitXid;
         var formulaTotal = document.getElementById(targetTotal);
         var optionTotal = (unitCost * unitCount).toFixed(2);
-        console.log(unitCount + " : " + optionTotal);
         formulaTotal.innerText = Number(optionTotal).toFixed(2);
         var sum = 0;
         var newTest = document.querySelectorAll(".form_option-total");
@@ -117,7 +107,6 @@ for (element of options) {
         }
         pageTotal.innerText = sum.toFixed(2);
         pageDeposit.innerText = (sum / 2).toFixed(2);
-
         // Convert the object to an arrat & set it to input value
         var formulasDataArray = [];
         for (var key in formulasData) {

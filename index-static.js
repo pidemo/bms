@@ -1,4 +1,4 @@
-console.log("latest-4.8.6");
+console.log("latest-4.8.7");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -6,7 +6,6 @@ var fullHash = window.location.hash;
 var mainForm = document.querySelector('#main-form-wrap');
 
 // Form Prefill Testing
-mainForm.classList.add('hidden');
 document.getElementById("bookform-contact").value = "Pierre";
 document.getElementById("bookform-company").value = "Company";
 document.getElementById("bookform-email").value = "pierre@email.com";
@@ -16,7 +15,7 @@ document.querySelector("#resto-xid").value = 58;
 document.querySelector('#main-form-veil').classList.remove('is-visible');
 document.querySelector('#date-validation-form').remove();
 document.querySelector('#date-confirmation-wrap').classList.add('is-visible');
-mainForm.classList.remove('hidden');
+mainForm.classList.remove('is-hidden');
 
 var request = document.getElementById("c-request"); 
 var bookingDate = document.getElementById("c-booking-date");
@@ -46,8 +45,6 @@ var endDateString = dateString + ' ' + timeEndString;
 var startDate = new Date(startDateString);
 var endDate = new Date(endDateString);
 
-console.log("Step 1 :", startDate, endDate);
-
 // Format dates as strings
 var startTimestamp = Math.floor(startDate.getTime());
 var endTimestamp = Math.floor(endDate.getTime());
@@ -58,8 +55,6 @@ const dateEnd = document.querySelector('#date-end');
 
 dateStart.value = startTimestamp;
 dateEnd.value = endTimestamp;
-
-console.log("Step 2 :", startTimestamp, endTimestamp);
 
 var formulasData = {};
 const options = document.getElementsByClassName('form_option');
@@ -87,7 +82,6 @@ for (element of options) {
         }
         pageTotal.innerText = sum.toFixed(2);
         pageDeposit.innerText = (sum / 2).toFixed(2);
-
         // Convert the object to an arrat & set it to input value
         var formulasDataArray = [];
         for (var key in formulasData) {
