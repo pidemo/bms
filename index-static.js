@@ -19,7 +19,7 @@ document.querySelector('#date-confirmation-wrap').classList.add('is-visible');
 mainForm.classList.remove('hidden');
 
 var request = document.getElementById("c-request"); 
-var bookingDate = document.getElementById("c-bookig-date");
+var bookingDate = document.getElementById("c-booking-date");
 var bookingTime = document.getElementById("c-booking-time");
 var bookingEnd = document.getElementById("c-booking-time-end");
 var bookingGid = document.getElementById("c-booking-gid");
