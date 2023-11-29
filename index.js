@@ -1,17 +1,17 @@
-console.log("latest-4.8.6.3");
+console.log("latest-4.8.6.4");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 var fullHash = window.location.hash;
 var mainForm = document.querySelector('#main-form-wrap');
+mainForm.classList.add('is-hidden');
 
-// Form Prefill Testing
-//mainForm.classList.add('hidden');
+/* Form Prefill Testing
 document.getElementById("bookform-contact").value = "Pierre";
 document.getElementById("bookform-company").value = "Company";
 document.getElementById("bookform-email").value = "pierre@email.com";
 document.getElementById("bookform-people").value = 20;
-
+*/
 
 let mainSection = document.querySelector("#bookform-content");
 let successSection = document.querySelector("#bookform-successful");
