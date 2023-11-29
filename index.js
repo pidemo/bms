@@ -1,4 +1,4 @@
-console.log("latest-4.8.6");
+console.log("latest-4.8.6.1");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -12,6 +12,7 @@ document.getElementById("bookform-company").value = "Company";
 document.getElementById("bookform-email").value = "pierre@email.com";
 document.getElementById("bookform-people").value = 20;
 
+/*
 let mainSection = document.querySelector("#bookform-content");
 let successSection = document.querySelector("#bookform-successful");
 let mainFormVeil = document.querySelector('#main-form-veil');
@@ -40,6 +41,21 @@ if (fullHash.includes('denied')) {
 if (fullHash.includes('successful')) {
     mainSection.classList.remove('is-visible');
     successSection.classList.remove('is-visible');
+};
+
+*/
+
+if (fullHash.includes('approved')) {
+    document.querySelector('#main-form-veil').classList.remove('is-visible');
+    document.querySelector('#date-validation-form').remove();
+    document.querySelector('#date-confirmation-wrap').classList.add('is-visible');
+    mainForm.classList.remove('hidden');
+} else {
+    document.querySelector('#main-form-veil').classList.add('is-visible');
+};
+
+if (fullHash.includes('denied')) {
+    document.querySelector('#bookform-denied').classList.add('is-visible');
 };
 
 //form prefill based on URL params :
