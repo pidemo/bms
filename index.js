@@ -1,4 +1,4 @@
-console.log("latest-4.8.7");
+console.log("latest-4.8.7.1");
 
 /* 
 // Form Prefill Testing
@@ -123,19 +123,21 @@ for (element of options) {
 document.getElementById('wf-form-Date-Validation').addEventListener('submit', function (event) {
     // Prevent the default form submission behavior
     event.preventDefault();
-    console.log("clicked");
 
-    /* Check if all three fields are not blank
-    var field1Value = document.getElementById('field1').value.trim();
-    var field2Value = document.getElementById('field2').value.trim();
-    var field3Value = document.getElementById('field3').value.trim();
-    
-    if (field1Value !== '' && field2Value !== '' && field3Value !== '') {
-        // If all fields are not blank, submit the form programmatically
+    // Check if all three fields are not blank
+    var dateField = document.getElementById('check-booking-date').value.trim();
+    var startField = document.getElementById('check-booking-time-start').value.trim();
+    var endField = document.getElementById('check-booking-time-end').value.trim();
+
+    if (dateField !== '' && startField !== '' && endField !== '') {
+        // Dynamically set the form's action and method
+        this.action = "https://hook.us1.make.com/4fa6tza7qsm9tfa8jhc2pkxlha1uak6i";
+        this.method = "post";
+
+        // Submit the form programmatically
         this.submit();
     } else {
         // Display an alert or any other indication that fields are required
         alert('All fields are required.');
     }
-    */
 });
