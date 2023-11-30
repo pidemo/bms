@@ -116,3 +116,26 @@ for (element of options) {
         document.getElementById('formulas-array').value = formulasDataArrayString;
     });
 };
+
+
+
+// date check form disable until filled out
+document.getElementById('wf-form-Date-Validation').addEventListener('submit', function (event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+    console.log("clicked");
+
+    /* Check if all three fields are not blank
+    var field1Value = document.getElementById('field1').value.trim();
+    var field2Value = document.getElementById('field2').value.trim();
+    var field3Value = document.getElementById('field3').value.trim();
+    
+    if (field1Value !== '' && field2Value !== '' && field3Value !== '') {
+        // If all fields are not blank, submit the form programmatically
+        this.submit();
+    } else {
+        // Display an alert or any other indication that fields are required
+        alert('All fields are required.');
+    }
+    */
+});
