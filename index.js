@@ -1,4 +1,4 @@
-console.log("latest-4.8.7.4");
+console.log("latest-4.8.7.5");
 
 /* 
 // Form Prefill Testing
@@ -125,9 +125,9 @@ document.getElementById('wf-form-Date-Validation').addEventListener('submit', fu
     event.preventDefault();
 
     // Check if all three fields are not blank
-    //var dateField = document.getElementById('check-booking-date').value.trim();
-    //var startField = document.getElementById('check-booking-time-start').value.trim();
-    //var endField = document.getElementById('check-booking-time-end').value.trim();
+    var dateField = document.getElementById('check-booking-date').value.trim();
+    var startField = document.getElementById('check-booking-time-start').value.trim();
+    var endField = document.getElementById('check-booking-time-end').value.trim();
 
     if (dateField !== '' && startField !== '' && endField !== '') {
         // Dynamically set the form's action and method
