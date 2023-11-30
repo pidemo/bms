@@ -1,8 +1,4 @@
-console.log("latest-4.8.8.4");
-
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-var fullHash = window.location.hash;
+console.log("latest-4.8.9");
 
 // Hide booking form - to leave it visible in designer
 document.querySelector('#main-form-wrap').classList.add('is-hidden');
@@ -47,6 +43,10 @@ for (element of options) {
 };
 
 // Confirmation window - redirect from stripe
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+var fullHash = window.location.hash;
+
 let mainSection = document.querySelector("#bookform-content");
 let successSection = document.querySelector("#bookform-successful");
 
