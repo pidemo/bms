@@ -1,4 +1,4 @@
-console.log("latest-4.8.7.3");
+console.log("latest-4.8.7.4");
 
 /* 
 // Form Prefill Testing
@@ -136,5 +136,6 @@ document.getElementById('wf-form-Date-Validation').addEventListener('submit', fu
 
         // Submit the form programmatically
         this.submit();
+        console.log("Submitted");
     }
 });
