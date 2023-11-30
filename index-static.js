@@ -17,11 +17,11 @@ document.querySelector('#main-form-veil').classList.remove('is-visible');
 document.querySelector('#date-confirmation-wrap').classList.add('is-visible');
 mainForm.classList.remove('is-hidden');
 
-var request = document.getElementById("c-request"); 
-var bookingDate = document.getElementById("c-booking-date");
-var bookingTime = document.getElementById("c-booking-time");
-var bookingEnd = document.getElementById("c-booking-time-end");
-var bookingGid = document.getElementById("c-booking-gid");
+let request = document.getElementById("c-request"); 
+let bookingDate = document.getElementById("c-booking-date");
+let bookingTime = document.getElementById("c-booking-time");
+let bookingEnd = document.getElementById("c-booking-time-end");
+let bookingGid = document.getElementById("c-booking-gid");
 
 if (request) {request.innerText = "approved";}
 if (bookingDate) {bookingDate.innerText = "2023-12-19";}

@@ -1,4 +1,4 @@
-console.log("latest-4.8.8.1");
+console.log("latest-4.8.8.2");
 
 /* 
 // Form Prefill Testing
@@ -66,14 +66,13 @@ var dateString = document.getElementById('c-booking-date').textContent;
 var timeString = document.getElementById('c-booking-time').textContent;
 var timeEndString = document.getElementById('c-booking-time-end').textContent;
 
+
 // Concatenate date and time strings
 var startDateString = dateString + ' ' + timeString;
 var endDateString = dateString + ' ' + timeEndString;
-
 // Parse date strings into Date objects
 var startDate = new Date(startDateString);
 var endDate = new Date(endDateString);
-
 // Format dates as strings
 var startTimestamp = Math.floor(startDate.getTime());
 var endTimestamp = Math.floor(endDate.getTime());
@@ -81,7 +80,6 @@ var endTimestamp = Math.floor(endDate.getTime());
 // date fields
 const dateStart = document.querySelector('#date-start');
 const dateEnd = document.querySelector('#date-end');
-
 dateStart.value = startTimestamp;
 dateEnd.value = endTimestamp;
 */
