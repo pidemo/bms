@@ -13,7 +13,7 @@ document.getElementById("bookform-people").value = 20;
 document.querySelector("#resto-xid").value = 58;
 
 document.querySelector('#main-form-veil').classList.remove('is-visible');
-document.querySelector('#date-validation-form').remove();
+//document.querySelector('#date-validation-form').remove();
 document.querySelector('#date-confirmation-wrap').classList.add('is-visible');
 mainForm.classList.remove('is-hidden');
 
