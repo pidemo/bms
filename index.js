@@ -1,4 +1,4 @@
-console.log("latest-4.8.7.5");
+console.log("latest-4.8.7.6");
 
 /* 
 // Form Prefill Testing
@@ -118,7 +118,7 @@ for (element of options) {
 };
 
 
-
+/*
 // date check form disable until filled out
 document.getElementById('wf-form-Date-Validation').addEventListener('submit', function (event) {
     // Prevent the default form submission behavior
@@ -139,3 +139,4 @@ document.getElementById('wf-form-Date-Validation').addEventListener('submit', fu
         console.log("Submitted");
     }
 });
+*/
