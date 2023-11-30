@@ -118,7 +118,7 @@ for (element of options) {
 };
 
 
-
+/*
 // date check form disable until filled out
 document.getElementById('wf-form-Date-Validation').addEventListener('submit', function (event) {
     // Prevent the default form submission behavior
@@ -141,3 +141,4 @@ document.getElementById('wf-form-Date-Validation').addEventListener('submit', fu
         alert('All fields are required.');
     }
 });
+*/
