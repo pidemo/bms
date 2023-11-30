@@ -1,4 +1,4 @@
-console.log("latest-4.8.7.6");
+console.log("latest-4.8.8.1");
 
 /* 
 // Form Prefill Testing
@@ -12,15 +12,19 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 var fullHash = window.location.hash;
 
-var mainForm = document.querySelector('#main-form-wrap');
+
 let mainSection = document.querySelector("#bookform-content");
 let successSection = document.querySelector("#bookform-successful");
+
+document.querySelector('#main-form-wrap').classList.add('is-hidden');
+
+/*
+// In wized now
 let mainFormVeil = document.querySelector('#main-form-veil');
 let dateForm = document.querySelector('#date-validation-form');
 let dateConfirmation = document.querySelector('#date-confirmation-wrap');
+let mainForm = document.querySelector('#main-form-wrap');
 let dateDenied = document.querySelector('#bookform-denied');
-
-mainForm.classList.add('is-hidden');
 
 if (fullHash.includes('approved')) {
     mainFormVeil.classList.remove('is-visible');
@@ -34,6 +38,7 @@ if (fullHash.includes('approved')) {
 if (fullHash.includes('denied')) {
     dateDenied.classList.add('is-visible');
 };
+*/
 if (fullHash.includes('successful')) {
     mainSection.classList.add('is-hidden');
     successSection.classList.add('is-visible');
@@ -42,6 +47,7 @@ if (fullHash.includes('successful')) {
     mainSection.classList.remove('is-hidden');
 };
 
+/*
 //form prefill based on URL params :
 var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
 for (var i = 0; i < hashParams.length; i++) {
@@ -54,9 +60,6 @@ for (var i = 0; i < hashParams.length; i++) {
     var targetElement = document.getElementById(target);
     if (targetElement) { targetElement.innerText = decoded; }
 };
-
-const pageTotal = document.querySelector('#bookform-total');
-const pageDeposit = document.querySelector('#bookform-deposit');
 
 // Date & GID auto fill
 var dateString = document.getElementById('c-booking-date').textContent;
@@ -81,6 +84,13 @@ const dateEnd = document.querySelector('#date-end');
 
 dateStart.value = startTimestamp;
 dateEnd.value = endTimestamp;
+*/
+
+
+
+// Formulas Math
+const pageTotal = document.querySelector('#bookform-total');
+const pageDeposit = document.querySelector('#bookform-deposit');
 
 var formulasData = {};
 const options = document.getElementsByClassName('form_option');
