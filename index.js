@@ -1,4 +1,4 @@
-console.log("latest-4.8.7.2");
+console.log("latest-4.8.7.3");
 
 /* 
 // Form Prefill Testing
@@ -129,15 +129,12 @@ document.getElementById('wf-form-Date-Validation').addEventListener('submit', fu
     //var startField = document.getElementById('check-booking-time-start').value.trim();
     //var endField = document.getElementById('check-booking-time-end').value.trim();
 
-    //if (dateField !== '' && startField !== '' && endField !== '') {
+    if (dateField !== '' && startField !== '' && endField !== '') {
         // Dynamically set the form's action and method
-    this.action = "https://hook.us1.make.com/4fa6tza7qsm9tfa8jhc2pkxlha1uak6i";
-    this.method = "post";
+        this.action = "https://hook.us1.make.com/4fa6tza7qsm9tfa8jhc2pkxlha1uak6i";
+        this.method = "post";
 
         // Submit the form programmatically
-    this.submit();
-    //} else {
-        // Display an alert or any other indication that fields are required
-        //alert('All fields are required.');
-    //}
+        this.submit();
+    }
 });
