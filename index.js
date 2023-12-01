@@ -1,7 +1,7 @@
 console.log("latest-4.8.9");
 
 // Hide booking form - to leave it visible in designer
-document.querySelector('#main-form-wrap').classList.add('is-hidden');
+//document.querySelector('#main-form-wrap').classList.add('is-hidden');
 
 // Formulas Math
 var formulasData = {};
@@ -45,6 +45,7 @@ for (element of options) {
 // Confirmation window - redirect from stripe
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
+const loader = document.querySelector("#booking-loader");
 var fullHash = window.location.hash;
 
 let mainSection = document.querySelector("#bookform-content");
@@ -57,3 +58,5 @@ if (fullHash.includes('successful')) {
     successSection.classList.remove('is-visible');
     mainSection.classList.remove('is-hidden');
 };
+
+loader.classList.add("is-hidden");
