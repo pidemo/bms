@@ -1,4 +1,4 @@
-console.log("latest-4.9");
+console.log("latest-4.9.1");
 
 // Hide booking form - to leave it visible in designer
 //document.querySelector('#main-form-wrap').classList.add('is-hidden');
@@ -45,7 +45,7 @@ for (element of options) {
 // Confirmation window - redirect from stripe
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const loader = document.querySelector("#booking-loader");
+const loader = document.querySelector("#loader");
 var fullHash = window.location.hash;
 
 let mainSection = document.querySelector("#bookform-content");
@@ -60,3 +60,15 @@ if (fullHash.includes('successful')) {
 };
 
 loader.classList.add("is-hidden");
+
+
+/*
+
+// Function to be executed when the timer expires
+function bookingExpired() {
+  console.log("Timer expired! 10 minutes have passed.");
+}
+// Call function after delay has expired
+setTimeout(bookingExpired,6000);
+
+*/
