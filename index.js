@@ -1,4 +1,4 @@
-console.log("latest-4.9.1");
+console.log("latest-4.9.2");
 
 // Hide booking form - to leave it visible in designer
 //document.querySelector('#main-form-wrap').classList.add('is-hidden');
